@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PikaRising-2.0">
+    <output-path>$PROJECT_DIR$/../../../../xampp/htdocs</output-path>
+    <root id="archive" name="PikaRising-2.0.jar">
+      <element id="module-output" name="PikaRising" />
+    </root>
+  </artifact>
+</component>

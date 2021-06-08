@@ -1,0 +1,15 @@
+name: PikaRising
+version: ${project.version}
+main: xyz.pikadev.pikarising.PikaRising
+api-version: 1.16
+authors: [ Pikadev ]
+description: Pikadev Tarafından Tasarlanıp Yazılmıştır.
+website: pikadev.xyz
+commands:
+  başlat:
+    description: Oyunu Başlatır
+    usage: /başlat
+    permissions:
+      pikarising.start:
+        description: Oyunu Başlatma Yetikisi
+        default: op
