@@ -49,7 +49,7 @@ public class Start implements CommandExecutor, Listener {
         PikaRising.instance.getServer().getScheduler().scheduleSyncDelayedTask(PikaRising.instance, new Runnable() {
             public void run() {
                 doLava();
-                Book.removeBook();
+                new Book().removeBook();
             }
         }, 20L * ((long) gameStartingTime));
         return true;

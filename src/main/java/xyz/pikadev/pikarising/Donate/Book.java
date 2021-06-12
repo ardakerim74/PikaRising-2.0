@@ -17,9 +17,9 @@ import xyz.pikadev.pikarising.Events.GameHandler;
 import java.util.ArrayList;
 
 public class Book implements Listener {
-    public static String donateUrl;
-
-    public static void removeBook() {
+    private String donateUrl = "https://pikadev.xyz";
+    private String bookName = "&6Pika&eRising 2.0";
+    public void removeBook() {
         for (Player player : Bukkit.getOnlinePlayers()) {
             for (int i = 0; i <= 36; i++) {
                 if (player.getInventory().getItem(i) != null) {
@@ -47,13 +47,13 @@ public class Book implements Listener {
         ItemStack book = new ItemStack(Material.WRITTEN_BOOK, 1);
         BookMeta bookMeta = (BookMeta) book.getItemMeta();
         bookMeta.setAuthor("Pikadev_");
-        bookMeta.setTitle(ChatColor.translateAlternateColorCodes('&', "&ePika&6Rising V2.0"));
+        bookMeta.setTitle(ChatColor.translateAlternateColorCodes('&', bookName));
         ArrayList<String> pages = new ArrayList<>();
         pages.add(ChatColor.translateAlternateColorCodes('&',
-                "&6Developer By Pikadev\n\n&0Bana destek olmak için aşağıdaki bağlantıya tıklayabilirsiniz\n\n" +
+                "&6Developed By Pikadev\n\n&0Bana destek olmak için aşağıdaki bağlantıya tıklayabilirsiniz\n\n" +
                         "İyi Oyunlar Dilerim :)\n\n\n" +
                         "&0&l         ↓↓↓\n\n" +
-                        "&3&n"+donateUrl));
+                        "&3&n» " + donateUrl));
         bookMeta.setPages(pages);
         book.setItemMeta(bookMeta);
         player.getInventory().setItem(8, book);
@@ -89,7 +89,7 @@ public class Book implements Listener {
     @EventHandler
     public void onDropBook(PlayerDropItemEvent event) {
         ItemStack book = event.getItemDrop().getItemStack();
-        if(event.getItemDrop().getItemStack().getType() == Material.WRITTEN_BOOK){
+        if (event.getItemDrop().getItemStack().getType() == Material.WRITTEN_BOOK) {
             BookMeta bookMeta = (BookMeta) book.getItemMeta();
             if (bookMeta.getAuthor()
                     .equals("Pikadev_")) {

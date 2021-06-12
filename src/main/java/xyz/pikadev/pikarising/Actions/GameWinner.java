@@ -20,16 +20,16 @@ public class GameWinner implements Listener {
     @EventHandler
     public void handler(PlayerDeathEvent event) {
         onlinePlayers = 0;
-        survivors = 0;
+        survivors = -1;
         dies = 0;
         for (Player player : Bukkit.getOnlinePlayers()) {
-            onlinePlayers += 1;
+            onlinePlayers++;
             if (player.getGameMode() == GameMode.SURVIVAL) {
-                survivors += 1;
+                survivors++;
                 lastPlayer = player;
             }
             if (player.getGameMode() == GameMode.SPECTATOR) {
-                dies += 1;
+                dies++;
             }
         }
         switch (survivors) {
