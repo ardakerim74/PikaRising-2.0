@@ -1,10 +1,10 @@
-name: PikaRising
+name: UptadeZ Rising
 version: 2.0
 main: xyz.pikadev.pikarising.PikaRising
 api-version: 1.16
-authors: [ Pikadev ]
-description: Pikadev Tarafından Tasarlanıp Yazılmıştır.
-website: pikadev.xyz
+authors: [ UptadeZ ]
+description: UptadeZ Tarafından Tasarlanıp Yazılmıştır.
+website: 
 commands:
   başlat:
     description: Oyunu Başlatır
